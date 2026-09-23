@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thousand Miles</title>
+<meta name="description" content="A health journal for iPhone. Journaling, not tracking.">
+<style>
+  :root {
+    --ink: #1c1c1e;
+    --ink-secondary: #6e6e73;
+    --ground: #ffffff;
+    --hairline: #e9e9eb;
+    --accent-a: #34c759;
+    --accent-b: #30b0c7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f2f2f4;
+      --ink-secondary: #98989e;
+      --ground: #111113;
+      --hairline: #2a2a2d;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    gap: 1.4rem;
+  }
+  .step {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
+    margin-bottom: 0.4rem;
+  }
+  h1 {
+    font-family: ui-serif, "New York", Georgia, "Times New Roman", serif;
+    font-size: clamp(2.4rem, 8vw, 3.6rem);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  .proverb {
+    font-size: 1.05rem;
+    color: var(--ink-secondary);
+    max-width: 26rem;
+    line-height: 1.5;
+    text-wrap: balance;
+  }
+  .what {
+    font-size: 0.95rem;
+    color: var(--ink-secondary);
+    max-width: 30rem;
+    line-height: 1.6;
+  }
+  .beta {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-secondary);
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+  }
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding: 1.6rem 1.5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem 1.6rem;
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+  }
+  footer a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  footer a:hover, footer a:focus-visible { text-decoration: underline; }
+  .copyright { flex-basis: 100%; text-align: center; margin-top: 0.6rem; }
+</style>
+</head>
+<body>
+<main>
+  <div class="step" aria-hidden="true"></div>
+  <h1>Thousand Miles</h1>
+  <p class="proverb">The journey of a thousand miles begins with a single step.</p>
+  <p class="what">A health journal for iPhone. Write down how training, meals, and rest actually felt — alongside what Apple Health measured. Journaling, not tracking.</p>
+  <span class="beta">Currently in private beta</span>
+</main>
+<footer>
+  <a href="/support">Support</a>
+  <a href="/privacy">Privacy Policy</a>
+  <a href="/terms">Terms of Service</a>
+  <a href="mailto:support@thousandmiles.app">support@thousandmiles.app</a>
+  <span class="copyright">© 2026 Winson Chow Wei Xin · Singapore</span>
+</footer>
+</body>
+</html>
