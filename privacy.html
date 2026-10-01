@@ -93,7 +93,7 @@
 <div class="page">
   <a class="home" href="/">← Thousand Miles</a>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: September 2026</p>
+  <p class="updated">Last updated: October 2026</p>
 
   <p class="lede">Thousand Miles is a health journal, not a medical provider, and the app is not a medical device.</p>
   <p>This policy describes what leaves your device, what doesn't, and what we can and cannot read. Where something syncs, we say so plainly rather than describing the app as local-only.</p>
@@ -109,7 +109,8 @@
   <ul>
     <li>Account info — your email address, and if you use Sign in with Apple, the Apple-issued user identifier plus any name you choose to share. Apple may give us a private relay address instead of your real one; either is fine.</li>
     <li>Entries you log — workouts, meals, moods, body measurements, notes, effort ratings, and photos.</li>
-    <li>Workouts you build yourself, and your workout schedule.</li>
+    <li>Workouts you build yourself, workouts you save to your library, your workout schedule, exercises you add to the library yourself, and notes you keep on an exercise.</li>
+    <li>Morning check-ins — how you rate your sleep and how your body feels, on mornings you answer.</li>
     <li>Profile details — display name, activity status, goals, an optional profile photo, and an optional manual max-heart-rate value. Date of birth, biological sex and height are read from your Apple Health profile when it has them; you only type them in if it doesn't.</li>
     <li>Health data you grant read access to — sleep, heart rate, HRV, resting heart rate, workouts, steps, nutrition, and similar signals from Apple Health. This is read on your phone and is not collected by us; see below.</li>
   </ul>
@@ -121,10 +122,11 @@
     <li>Entries you logged yourself, including their notes, nutrition values and set-by-set weights.</li>
     <li>Notes, photos and effort ratings you add to entries that came from Apple Health.</li>
     <li>Photos attached to entries.</li>
-    <li>Workouts you built yourself.</li>
+    <li>Workouts you built yourself, workouts you saved to your library, and exercises you added to the library yourself.</li>
+    <li>Your morning check-ins.</li>
     <li>Your display name and the goals you wrote down.</li>
     <li>Your activity status, a max heart rate you set yourself, and any date of birth, sex or height you typed in (ones read from Apple Health stay on your phone).</li>
-    <li>Your app settings, including your sleep goal, and your nutrition goals.</li>
+    <li>Your app settings, including your sleep goal, notes you keep on an exercise, and the bar and plates you set for the plate calculator, and your nutrition goals.</li>
     <li>Your workout schedule and your profile photo.</li>
   </ul>
   <p>The key is created on your phone and kept in your iCloud Keychain, so your other devices signed into the same Apple ID can read your journal and we cannot. If iCloud Keychain is off on a device, that device cannot read entries made elsewhere until it is on. A recovery code, made on your phone and shown to you once, can unlock your journal on a device without iCloud Keychain; we store only a copy of the key wrapped under that code, which we cannot open. If you lose every device, your iCloud Keychain and the code, we cannot recover your entries for you — we never had the key.</p>
@@ -132,6 +134,7 @@
   <ul>
     <li>When each row was last changed and whether it was deleted — this is how your devices agree on the latest version.</li>
     <li>The colour of your profile card.</li>
+    <li>If you use Sign in with Apple: a token Apple issues for your account. We keep it only so that deleting your account can also disconnect Thousand Miles from your Apple ID, as Apple requires, and it is deleted with your account.</li>
     <li>A count of AI nutrition estimates, used to cap usage: how many you have used today with Plus, or how many of your three free estimates you have used without it.</li>
     <li>If you subscribe to Thousand Miles Plus: which plan you bought, its App Store transaction identifier, and when it renews or ends. This comes from Apple's signed receipt. We never see your payment details, because Apple handles payment.</li>
   </ul>
@@ -140,7 +143,8 @@
   <h2>What never leaves your device</h2>
   <ul>
     <li>Apple Health data itself — the workouts, sleep, heart rate and other measurements, and the date of birth, sex and height in your Health profile. These are read live and used on-device, and never uploaded; another device re-reads them from its own Health store instead. Anything you add on top (a note, a photo, an effort rating) is yours rather than Health's, and syncs encrypted as described above.</li>
-    <li>Your readiness scores, morning check-ins and recaps. These are computed on-device from the data above.</li>
+    <li>Your readiness scores and recaps. These are computed on-device from the data above.</li>
+    <li>A workout while it's in progress. Its sets are kept on your phone until you finish it, and then sync encrypted with your other entries. Its rest timer appears on your lock screen through iOS, on your phone only.</li>
   </ul>
 
   <h2>AI nutrition estimates</h2>
