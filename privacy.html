@@ -124,7 +124,7 @@
     <li>Photos attached to entries.</li>
     <li>Workouts you built yourself, workouts you saved to your library, and exercises you added to the library yourself.</li>
     <li>Your morning check-ins.</li>
-    <li>Your display name and the goals you wrote down.</li>
+    <li>Your display name, the goals you wrote down, and the goals Journey Compass checks.</li>
     <li>Your activity status, a max heart rate you set yourself, and any date of birth, sex or height you typed in (ones read from Apple Health stay on your phone).</li>
     <li>Your app settings, including your sleep goal, notes you keep on an exercise, and the bar and plates you set for the plate calculator, and your nutrition goals.</li>
     <li>Your workout schedule and your profile photo.</li>
@@ -135,7 +135,7 @@
     <li>When each row was last changed and whether it was deleted — this is how your devices agree on the latest version.</li>
     <li>The colour of your profile card.</li>
     <li>If you use Sign in with Apple: a token Apple issues for your account. We keep it only so that deleting your account can also disconnect Thousand Miles from your Apple ID, as Apple requires, and it is deleted with your account.</li>
-    <li>A count of AI nutrition estimates, used to cap usage: how many you have used today with Plus, or how many of your three free estimates you have used without it.</li>
+    <li>A count of AI nutrition estimates and of workouts built with AI, used to cap usage: how many you have used today with Plus, or how many of your three free estimates you have used without it.</li>
     <li>If you subscribe to Thousand Miles Plus: which plan you bought, its App Store transaction identifier, and when it renews or ends. This comes from Apple's signed receipt. We never see your payment details, because Apple handles payment.</li>
   </ul>
   <p>Limits: each photo is reduced to a phone-screen size before upload, and single files are capped at 1.5 MB. Photo backup holds 200 photos without Thousand Miles Plus and 2 GB with it.</p>
@@ -149,6 +149,7 @@
 
   <h2>AI nutrition estimates</h2>
   <p>When you ask Thousand Miles to estimate nutrition for a meal, the description you typed and the photo you attached (if any) are sent to Anthropic's Claude API through our server, which returns the estimate. This happens only when you tap Estimate — never automatically, and never for entries you log by hand. We send only that meal's description and photo, with no account identifier attached; our server keeps a count of estimates per account and does not store the meal, the photo or the answer, and its logs record only counts and error codes. Anthropic processes it as our service provider and does not use it to train their models. If you would rather not share a meal, enter the values yourself.</p>
+  <p>When you ask Thousand Miles Plus to build a workout, your goal, the answers you chose (the session, the time, the equipment you have, anything you asked it to avoid, such as a sore knee or jumping, and anything you typed for it to know), a short summary of your last four weeks of training (your recent top sets and estimated bests, how often and how far you ran, rode or swam, and your easy pace) and the names of exercises in your library are sent to Anthropic's Claude API through our server, which returns the workout. If you leave them on under "What we'll use", this morning's readiness (the word and the score, not the measurements behind it), this week's training load and the last few days of training go too; switch any of them off and it stays on your phone. This happens only when you tap Build it. No account identifier is attached; our server keeps a count of builds per account and does not store your answers, the summary or the workout, and its logs record only counts and error codes. Anthropic processes it as our service provider and does not use it to train their models. Journey Compass's weekly checks on your goals are worked out on your phone and are not sent anywhere.</p>
 
   <h2>What we don't do</h2>
   <ul>
@@ -176,7 +177,7 @@
   <p>Thousand Miles is operated from Singapore, and personal data is handled under the Personal Data Protection Act 2012. Our Data Protection Officer can be reached at <a href="mailto:privacy@thousandmiles.app">privacy@thousandmiles.app</a>. You can ask us to access or correct the personal data we hold about you, or withdraw your consent, at the same address.</p>
 
   <h2>Where your data is held</h2>
-  <p>Our backend runs on Supabase in Singapore, and AI estimates are processed by Anthropic. Anthropic may process data outside your country, including in the United States.</p>
+  <p>Our backend runs on Supabase in Singapore, and AI estimates and workouts built with AI are processed by Anthropic. Anthropic may process data outside your country, including in the United States.</p>
 
   <h2>Children</h2>
   <p>Thousand Miles is not directed at children under 13, or the minimum age required in your region.</p>
