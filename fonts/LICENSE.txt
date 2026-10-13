@@ -1,0 +1,22 @@
+fundamental-brigade.ttf
+
+Fundamental Brigade
+Copyright (c) 2010, 2012 by Peter Wiegel (www.peter-wiegel.de),
+original typeface by Arno Drescher, 1935.
+"Fundamental Brigade" is a trademark of Peter Wiegel.
+
+The font is offered by its author under either of two free licences, as
+stated inside the font file itself:
+
+  - the SIL Open Font License, Version 1.1
+    https://openfontlicense.org (formerly http://scripts.sil.org/OFL)
+  - the GNU General Public License with the font exception
+    https://www.gnu.org/licenses/gpl-faq.html#FontException
+
+Both licences permit embedding the font in web pages, as this site does
+with @font-face. The file is the unmodified original, served as-is and
+not sold on its own. It is the same file the Thousand Miles app embeds
+(ThousandMiles/Resources/Fonts/fundamental-brigade.ttf).
+
+No other font is served by this site. Body text uses the visitor's own
+system font.

@@ -3,117 +3,176 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thousand Miles</title>
-<meta name="description" content="A health journal for iPhone. Journaling, not tracking.">
-<style>
-  :root {
-    --ink: #1c1c1e;
-    --ink-secondary: #6e6e73;
-    --ground: #ffffff;
-    --hairline: #e9e9eb;
-    --accent-a: #34c759;
-    --accent-b: #30b0c7;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ink: #f2f2f4;
-      --ink-secondary: #98989e;
-      --ground: #111113;
-      --hairline: #2a2a2d;
-    }
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--ground);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-  }
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 1.5rem;
-    gap: 1.4rem;
-  }
-  .step {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-a), var(--accent-b));
-    margin-bottom: 0.4rem;
-  }
-  h1 {
-    font-family: ui-serif, "New York", Georgia, "Times New Roman", serif;
-    font-size: clamp(2.4rem, 8vw, 3.6rem);
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    text-wrap: balance;
-  }
-  .proverb {
-    font-size: 1.05rem;
-    color: var(--ink-secondary);
-    max-width: 26rem;
-    line-height: 1.5;
-    text-wrap: balance;
-  }
-  .what {
-    font-size: 0.95rem;
-    color: var(--ink-secondary);
-    max-width: 30rem;
-    line-height: 1.6;
-  }
-  .beta {
-    display: inline-block;
-    margin-top: 0.6rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-secondary);
-    border: 1px solid var(--hairline);
-    border-radius: 999px;
-    padding: 0.45rem 1rem;
-  }
-  footer {
-    border-top: 1px solid var(--hairline);
-    padding: 1.6rem 1.5rem 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem 1.6rem;
-    font-size: 0.85rem;
-    color: var(--ink-secondary);
-  }
-  footer a {
-    color: var(--ink);
-    text-decoration: none;
-  }
-  footer a:hover, footer a:focus-visible { text-decoration: underline; }
-  .copyright { flex-basis: 100%; text-align: center; margin-top: 0.6rem; }
-</style>
+<title>Thousand Miles, a health journal for iPhone</title>
+<meta name="description" content="Write down how training, meals and rest actually felt, next to what Apple Health measured. A morning readiness read and a weekly look at where you're going. Journaling, not tracking.">
+<link rel="canonical" href="https://thousandmiles.app/">
+<meta name="apple-itunes-app" content="app-id=6804423331">
+<meta name="theme-color" content="#4e209f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Thousand Miles">
+<meta property="og:title" content="Thousand Miles, a health journal for iPhone">
+<meta property="og:description" content="Go the distance, your way. Write down how training, meals and rest actually felt, next to what Apple Health measured. Journaling, not tracking.">
+<meta property="og:url" content="https://thousandmiles.app/">
+<meta property="og:image" content="https://thousandmiles.app/images/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Thousand Miles logo in white on purple, with the line Go the distance, your way.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thousand Miles, a health journal for iPhone">
+<meta name="twitter:description" content="Go the distance, your way. Journaling, not tracking.">
+<meta name="twitter:image" content="https://thousandmiles.app/images/og.png">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preload" href="/fonts/fundamental-brigade.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
 </head>
-<body>
-<main>
-  <div class="step" aria-hidden="true"></div>
-  <h1>Thousand Miles</h1>
-  <p class="proverb">The journey of a thousand miles begins with a single step.</p>
-  <p class="what">A health journal for iPhone. Write down how training, meals, and rest actually felt — alongside what Apple Health measured. Journaling, not tracking.</p>
-  <span class="beta">Currently in private beta</span>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header over-iris">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Thousand Miles, home">
+      <img src="/images/logo-dark.png" alt="Thousand Miles" width="510" height="595">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="/#journal">Journal</a></li>
+        <li><a href="/#readiness">Readiness</a></li>
+        <li><a href="/#plus">Plus</a></li>
+        <li><a href="/#privacy">Privacy</a></li>
+        <li><a href="/support">Support</a></li>
+        <li class="nav-cta"><a class="pill" href="https://apps.apple.com/app/id6804423331">Get the app</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero-iris" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 id="hero-title"><span>Go the</span> <span>distance,</span> <span>your way.</span></h1>
+        <p class="lead">A health journal for iPhone. How training, meals and rest felt, beside what Apple Health measured, read back to you each morning in plain words.</p>
+        <a class="appstore" href="https://apps.apple.com/app/id6804423331">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+          <span><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <p class="price">Free. Plus from US$5.99 a month.</p>
+      </div>
+      <div class="hero-phones">
+        <figure class="phone phone-back">
+          <div class="phone-body">
+            <img src="/images/shot-insights.png" width="460" height="1000" alt="The Insights training page: a week read as mostly hard, each day marked by type, and strength cards for lifts and personal records.">
+          </div>
+        </figure>
+        <figure class="phone phone-front">
+          <div class="phone-body">
+            <img src="/images/shot-today.png" width="460" height="1000" alt="The Today screen: the morning's readiness headline with a few sentences on why, and buttons to add a workout, meal, mood or body entry.">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="readiness" aria-labelledby="miles-title">
+    <div class="wrap">
+      <div class="head-row">
+        <h2 class="h-xl" id="miles-title">Every mile tells you something</h2>
+        <p class="lead">Let's make sense of it. Three reads, each against your own usual, never a population norm.</p>
+      </div>
+      <ul class="cards reads">
+        <li class="card tinted">
+          <p class="eyebrow"><span class="num">01</span> Readiness</p>
+          <h3>Good day for a big effort</h3>
+          <p>Sleep, recovery and how hard the week has been, in one morning headline. A watch makes it richer; a rating of your morning is enough to start.</p>
+        </li>
+        <li class="card tinted">
+          <p class="eyebrow"><span class="num">02</span> Journal</p>
+          <h3>Keep the feel, not just the number</h3>
+          <p>Workouts, meals, mood and weigh-ins with a photo and a few words. Health workouts arrive on their own; you add how they went.</p>
+        </li>
+        <li class="card tinted">
+          <p class="eyebrow"><span class="num">03</span> Journey Compass</p>
+          <h3>One change a week</h3>
+          <p>Set a goal, then each Monday see last week against the path and the single thing worth changing. No streaks, no pressure.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section band" id="journal" aria-labelledby="further-title">
+    <div class="wrap split">
+      <div>
+        <h2 class="h-l" id="further-title">A little further than yesterday</h2>
+        <p class="lead">Bests show up as they happen. Weekly and monthly recaps tell the story of where you went and what changed, ready to share.</p>
+      </div>
+      <div class="frames">
+        <figure class="phone">
+          <div class="phone-body">
+            <img src="/images/shot-workout.png" width="460" height="1000" loading="lazy" alt="A workout in progress: sets of seated dumbbell shoulder press logged with weight and reps, a rest timer, and the session's time, sets and volume.">
+          </div>
+        </figure>
+        <figure class="phone">
+          <div class="phone-body">
+            <img src="/images/shot-journal.png" width="460" height="1000" loading="lazy" alt="The Journal: the week's days, a memory from a year ago, and today's entries summed up in a sentence.">
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap privacy-grid">
+      <h2 class="h-l" id="privacy-title">We can't read your journal. That's the design.</h2>
+      <div>
+        <p class="lead">Entries, photos and notes are sealed on your phone with a key kept in your iCloud Keychain. Our server holds them for your other devices and cannot open them. Health data never leaves your phone, and the AI features never see it or your training history: they ask first and get only what you type. No analytics. Stored in Singapore. Export or delete everything from Settings.</p>
+        <p class="more"><a href="/privacy">Read the privacy policy</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section night" id="plus" aria-labelledby="plus-title">
+    <div class="wrap">
+      <div class="head-row">
+        <h2 class="h-xl" id="plus-title">Thousand Miles Plus</h2>
+        <p class="lead">The journal is free, with one goal and your latest 200 photos backed up. Plus adds the parts that take a server.</p>
+      </div>
+      <ul class="cards">
+        <li class="card outlined">
+          <h3>Meal numbers from a photo</h3>
+          <p>Calories, protein, carbs and fat worked out from a picture or a few words. Included, within fair use.</p>
+        </li>
+        <li class="card outlined">
+          <h3>Workouts built for your goal</h3>
+          <p>One session at a time, at this week's weights and paces, from your own training.</p>
+        </li>
+        <li class="card outlined">
+          <h3>Three goals, 2 GB of photos</h3>
+          <p>Up to three journeys on the compass at once, and 2 GB of your latest photos, about 4,000, in the backup.</p>
+        </li>
+      </ul>
+      <div class="plus-foot">
+        <a class="button" href="https://apps.apple.com/app/id6804423331">Start in the app</a>
+        <p>US$5.99 a month or US$49.99 a year, after a 7-day free trial.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
-<footer>
-  <a href="/support">Support</a>
-  <a href="/privacy">Privacy Policy</a>
-  <a href="/terms">Terms of Service</a>
-  <a href="mailto:support@thousandmiles.app">support@thousandmiles.app</a>
-  <span class="copyright">© 2026 Winson Chow Wei Xin · Singapore</span>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="mailto:support@thousandmiles.app">support@thousandmiles.app</a>
+    </nav>
+    <p class="copyright">© 2026 Winson Chow Wei Xin, Singapore</p>
+  </div>
 </footer>
 </body>
 </html>
