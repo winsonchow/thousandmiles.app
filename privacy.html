@@ -51,7 +51,7 @@
     <div class="wrap">
       <p class="eyebrow">Legal</p>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 23 October 2026</p>
+      <p class="updated">Last updated: 26 October 2026</p>
     </div>
   </div>
   <article class="wrap doc">
@@ -61,23 +61,23 @@
   <h2>The short version</h2>
   <ul>
     <li>Your Apple Health data never leaves your phone, and the AI features never see it or your training history.</li>
-    <li>What you write — entries, notes, photos, the workouts you build — is encrypted on your phone before it is stored on our servers, with a key that only your devices hold. We cannot read it.</li>
+    <li>What you write (entries, notes, photos, the workouts you build) is encrypted on your phone before it is stored on our servers, with a key that only your devices hold. We cannot read it.</li>
     <li>We collect no analytics and sell nothing.</li>
   </ul>
 
   <h2>What we collect</h2>
   <ul>
-    <li>Account info — your email address, and if you use Sign in with Apple, the Apple-issued user identifier plus any name you choose to share. Apple may give us a private relay address instead of your real one; either is fine.</li>
-    <li>Entries you log — workouts, meals, moods, body measurements, notes, effort ratings, and photos.</li>
+    <li>Account info: your email address, and if you use Sign in with Apple, the Apple-issued user identifier plus any name you choose to share. Apple may give us a private relay address instead of your real one; either is fine.</li>
+    <li>Entries you log: workouts, meals, moods, body measurements, notes, effort ratings, and photos.</li>
     <li>Workouts you build yourself, workouts you save to your library, your workout schedule, exercises you add to the library yourself, and notes you keep on an exercise.</li>
-    <li>Morning check-ins — how you rate your sleep and how your body feels, on mornings you answer.</li>
-    <li>Profile details — display name, activity status, goals, an optional profile photo, and an optional manual max-heart-rate value. Date of birth, biological sex and height are read from your Apple Health profile when it has them; you only type them in if it doesn't.</li>
-    <li>Health data you grant read access to — sleep, heart rate, HRV, resting heart rate, workouts, steps, nutrition, and similar signals from Apple Health. This is read on your phone and is not collected by us; see below.</li>
+    <li>Morning check-ins: how you rate your sleep and how your body feels, on mornings you answer.</li>
+    <li>Profile details: display name, activity status, goals, an optional profile photo, and an optional manual max-heart-rate value. Date of birth, biological sex and height are read from your Apple Health profile when it has them; you only type them in if it doesn't.</li>
+    <li>Health data you grant read access to: sleep, heart rate, HRV, resting heart rate, workouts and their effort ratings, steps, nutrition, and similar signals from Apple Health. This is read on your phone and is not collected by us; see below.</li>
   </ul>
 
   <h2>What syncs to our servers, and how</h2>
   <p>When you are signed in, these are stored on our backend (Supabase) so they survive a reinstall and reach your other devices. Each row is readable only by your account.</p>
-  <p>Encrypted on your phone before upload — we hold the ciphertext and cannot read it:</p>
+  <p>Encrypted on your phone before upload, so we hold the ciphertext and cannot read it:</p>
   <ul>
     <li>Entries you logged yourself, including their notes, nutrition values and set-by-set weights.</li>
     <li>Notes, photos and effort ratings you add to entries that came from Apple Health.</li>
@@ -89,10 +89,10 @@
     <li>Your app settings, including your sleep goal, notes you keep on an exercise, and the bar and plates you set for the plate calculator, and your nutrition goals.</li>
     <li>Your workout schedule and your profile photo.</li>
   </ul>
-  <p>The key is created on your phone and kept in your iCloud Keychain, so your other devices signed into the same Apple ID can read your journal and we cannot. If iCloud Keychain is off on a device, that device cannot read entries made elsewhere until it is on. A recovery code, made on your phone and shown to you once, can unlock your journal on a device without iCloud Keychain; we store only a copy of the key wrapped under that code, which we cannot open. If you lose every device, your iCloud Keychain and the code, we cannot recover your entries for you — we never had the key.</p>
+  <p>The key is created on your phone and kept in your iCloud Keychain, so your other devices signed into the same Apple ID can read your journal and we cannot. If iCloud Keychain is off on a device, that device cannot read entries made elsewhere until it is on. A recovery code, made on your phone and shown to you once, can unlock your journal on a device without iCloud Keychain; we store only a copy of the key wrapped under that code, which we cannot open. If you lose every device, your iCloud Keychain and the code, we cannot recover your entries for you, because we never had the key.</p>
   <p>Stored as-is, because the server needs them to work or they are not your journal:</p>
   <ul>
-    <li>When each row was last changed and whether it was deleted — this is how your devices agree on the latest version.</li>
+    <li>When each row was last changed and whether it was deleted. This is how your devices agree on the latest version.</li>
     <li>The colour of your profile card.</li>
     <li>If you use Sign in with Apple: a token Apple issues for your account. We keep it only so that deleting your account can also disconnect Thousand Miles from your Apple ID, as Apple requires, and it is deleted with your account.</li>
     <li>A count of AI nutrition estimates and of workouts built with AI, used to cap usage: how many you have used today with Plus, or how many of your three free estimates you have used without it.</li>
@@ -102,14 +102,14 @@
 
   <h2>What never leaves your device</h2>
   <ul>
-    <li>Apple Health data itself — the workouts, sleep, heart rate and other measurements, and the date of birth, sex and height in your Health profile. These are read live and used on-device, and never uploaded; another device re-reads them from its own Health store instead. Anything you add on top (a note, a photo, an effort rating) is yours rather than Health's, and syncs encrypted as described above.</li>
+    <li>Apple Health data itself: the workouts, sleep, heart rate and other measurements, and the date of birth, sex and height in your Health profile. These are read live and used on-device, and never uploaded; another device re-reads them from its own Health store instead. Anything you add on top (a note, a photo, an effort rating) is yours rather than Health's, and syncs encrypted as described above.</li>
     <li>Your readiness scores and recaps. These are computed on-device from the data above.</li>
     <li>Your Apple Health data and your training history, as far as the AI features go. Build with AI, meal estimates and Your week at the table never receive them: Build with AI and meal estimates get only what you type or pick, and Your week at the table only the meals you logged in Thousand Miles. (Workouts you log yourself still sync encrypted with your other entries, as described above.)</li>
     <li>A workout while it's in progress. Its sets are kept on your phone until you finish it, and then sync encrypted with your other entries. Its rest timer appears on your lock screen through iOS, on your phone only.</li>
   </ul>
 
   <h2>AI nutrition estimates</h2>
-  <p>When you ask Thousand Miles to estimate nutrition for a meal, the description you typed and the photo you attached (if any) are sent to Anthropic's Claude API through our server, which returns the estimate. The first time, before anything is sent, a screen names Claude by Anthropic and asks for your permission; you can switch AI features off at any time under Profile, Privacy, AI and your data. This happens only when you tap Estimate — never automatically, and never for entries you log by hand. We send only that meal's description and photo, with no account identifier attached; our server keeps a count of estimates per account and does not store the meal, the photo or the answer, and its logs record only counts and error codes. Anthropic processes it as our service provider and does not use it to train their models. If you would rather not share a meal, enter the values yourself.</p>
+  <p>When you ask Thousand Miles to estimate nutrition for a meal, the description you typed and the photo you attached (if any) are sent to Anthropic's Claude API through our server, which returns the estimate. The first time, before anything is sent, a screen names Claude by Anthropic and asks for your permission; you can switch AI features off at any time under Profile, Privacy, AI and your data. This happens only when you tap Estimate. It never happens automatically, and never for entries you log by hand. We send only that meal's description and photo, with no account identifier attached; our server keeps a count of estimates per account and does not store the meal, the photo or the answer, and its logs record only counts and error codes. Anthropic processes it as our service provider and does not use it to train their models. If you would rather not share a meal, enter the values yourself.</p>
   <p>When you ask Thousand Miles Plus to build a workout, only what you typed or picked is sent to Anthropic's Claude API through our server, which returns the workout: the goal target you set, the session type and focus, the time, the equipment or place, anything you asked it to avoid, a note if you wrote one, and the names of exercises in your library. No Apple Health data and no fitness data goes with it, and neither do your readiness, your training load or your recent workouts. Claude drafts the structure; your phone then fills in every weight, pace and distance from data that never leaves it. The first time, before anything is sent, a screen names Claude by Anthropic and asks for your permission; you can switch AI features off at any time under Profile, Privacy, AI and your data. This happens only when you tap Build workout. No account identifier is attached; our server keeps a count of builds per account and nothing else, and its logs record only counts and error codes. Anthropic processes it as our service provider and does not use it to train their models. Your goals' weekly check-ins are worked out on your phone and are not sent anywhere.</p>
   <p>When you open Your week at the table on Thousand Miles Plus, the meals you logged in Thousand Miles that week (each one's type, day, the first 80 characters of its description and its nutrition figures, with the weekly figures your phone worked out from them) are sent to Anthropic's Claude API through our server, which returns a short analysis and small suggestions; these are kept on your phone and synced end-to-end encrypted like your journal. No Apple Health data, weight, goals or account identifier goes with it, our server keeps only a count of reads per week, and Anthropic processes it as our service provider and does not use it to train their models.</p>
 
@@ -122,7 +122,7 @@
   </ul>
 
   <h2>Analytics</h2>
-  <p>We currently collect no usage analytics. If that changes, it will be opt-in, off by default, controlled in Settings, and limited to anonymous behavioural signals — never your health data or the contents of your entries.</p>
+  <p>We currently collect no usage analytics. If that changes, it will be opt-in, off by default, controlled in Settings, and limited to anonymous behavioural signals, never your health data or the contents of your entries.</p>
 
   <h2>Retention</h2>
   <p>Data stays on our servers until you delete it. Deleting your account removes your rows, your stored photos and the encryption key on your devices immediately; backups age out within 30 days. Entries and photos you delete in the app are removed from our servers on the next sync.</p>
