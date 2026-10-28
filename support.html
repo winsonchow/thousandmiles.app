@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Support, Thousand Miles</title>
 <meta name="description" content="Help with the Thousand Miles health journal: contact, subscriptions, a new phone, your data.">
 <link rel="canonical" href="https://thousandmiles.app/support">
 <meta name="apple-itunes-app" content="app-id=6804423331">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121118" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Thousand Miles">
 <meta property="og:title" content="Support, Thousand Miles">
@@ -18,92 +21,87 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<link rel="preload" href="/fonts/fundamental-brigade.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="sentinel" aria-hidden="true"></div>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="/" aria-label="Thousand Miles, home">
-      <picture>
-        <source srcset="/images/logo-dark.png" media="(prefers-color-scheme: dark)">
-        <img src="/images/logo-light.png" alt="Thousand Miles" width="510" height="595">
-      </picture>
-    </a>
-    <nav class="site-nav" aria-label="Main">
-      <ul>
-        <li><a href="/#journal">Journal</a></li>
-        <li><a href="/#readiness">Readiness</a></li>
-        <li><a href="/#plus">Plus</a></li>
-        <li><a href="/#privacy">Privacy</a></li>
-        <li><a href="/support" aria-current="page">Support</a></li>
-        <li class="nav-cta"><a class="pill" href="https://apps.apple.com/app/id6804423331">Get the app</a></li>
-      </ul>
+<header class="hdr">
+  <div class="bar">
+    <a class="brand" href="/" aria-label="Thousand Miles, home"><img src="/images/icon-256.jpg" alt="" width="32" height="32"><span>Thousand Miles</span></a>
+    <nav class="tabs" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
     </nav>
+    <a class="btn btn-primary get" href="https://apps.apple.com/app/id6804423331">Get the app</a>
   </div>
 </header>
 
-<main id="main">
-  <div class="doc-head">
-    <div class="wrap">
-      <p class="eyebrow">Support</p>
+<main id="main" tabindex="-1">
+  <div class="wrap reading">
+    <header class="doc-head">
+      <p class="kicker">Support</p>
       <h1>We're here to help</h1>
       <p class="updated">Help with the Thousand Miles health journal</p>
-    </div>
+    </header>
+    <nav class="toc" aria-label="Support topics"><p>On this page</p><ol><li><a href="#getting-started">Getting started</a></li><li><a href="#plus">Thousand Miles Plus</a></li><li><a href="#new-phone">A new phone</a></li><li><a href="#your-data">Your data</a></li><li><a href="#please-note">Please note</a></li></ol></nav>
+    <article class="doc">
+      <p class="lede">Something not working, or a question these answers don't cover? Email us, and include your iPhone model and iOS version if something is broken.</p>
+      <p class="contact"><span class="k">Email us</span><a href="mailto:support@thousandmiles.app">support@thousandmiles.app</a></p>
+      <p>For privacy questions or a copy of your data: <a href="mailto:privacy@thousandmiles.app">privacy@thousandmiles.app</a>.</p>
+      <h2 id="getting-started">Getting started</h2>
+      <div class="faq">
+      <details id="sign-in"><summary>How do I sign in?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>Enter your email and we send a one-time code, so there's no password. You can also continue with Apple. An account is what lets your journal survive a reinstall and reach your other devices.</p></details>
+      <details id="apple-watch"><summary>Do I need an Apple Watch?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>No. Any watch or tracker that writes to Apple Health works: Garmin, Oura, Whoop, Fitbit, Polar, Coros and others. With no tracker, the readiness card asks two quick questions each morning instead.</p></details>
+      <details id="health-access"><summary>How do I change what Thousand Miles can read from Apple Health?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>Open the Settings app → Health → Data Access &amp; Devices → Thousand Miles, and switch each type on or off. The app can't show Apple's permission sheet a second time, so this is the way back if you declined it.</p></details>
+      </div>
+      <h2 id="plus">Thousand Miles Plus</h2>
+      <div class="faq">
+      <details id="cancel"><summary>How do I cancel or change my plan?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>In the Settings app, tap your name → Subscriptions → Thousand Miles Plus. You can also open it from Profile → Thousand Miles Plus → Manage subscription in the app. Cancel at least 24 hours before the period ends to avoid the next renewal; Plus stays active until then.</p></details>
+      <details id="refund"><summary>How do I get a refund?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>Apple processes every purchase and handles all refunds: request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We can't issue refunds ourselves.</p></details>
+      <details id="restore"><summary>I paid, but Plus isn't showing.<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>Open Profile → Thousand Miles Plus → Restore purchases, signed in to the same Apple Account you paid with. If you have an offer code, use Redeem a code on the same page.</p></details>
+      </div>
+      <h2 id="new-phone">A new phone</h2>
+      <div class="faq">
+      <details id="move"><summary>Will my journal come with me?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>Yes. Sign in with the same account. Your journal is encrypted with a key kept in your iCloud Keychain, so a phone signed in to the same Apple ID with iCloud Keychain on opens it straight away. Apple Health data moves through Apple's own iCloud Health sync.</p></details>
+      <details id="locked"><summary>My new phone says some of my journal is locked.<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>That phone doesn't have your key yet. Turn on iCloud Keychain (Settings → your name → iCloud → Passwords and Keychain) and give it a minute, or choose Enter your recovery code on the sheet the app shows. Nothing is deleted while it's locked. If every device, your iCloud Keychain and your recovery code are all lost, we can't unlock it for you, because we never had the key.</p></details>
+      </div>
+      <h2 id="your-data">Your data</h2>
+      <div class="faq">
+      <details id="export"><summary>How do I export everything?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>Settings → Privacy → Export My Data. You get a zip of every entry, your profile, settings and goals as readable JSON, plus your photos. Apple Health data isn't in it; the Health app has its own export.</p></details>
+      <details id="delete"><summary>How do I delete my account?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>Settings → Delete Account. This removes your data from our servers and clears the app on that phone. Nothing in Apple Health is touched. Export first if you want a copy.</p></details>
+      <details id="data"><summary>What do you do with my data?<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 5.5l4 4 4-4"/></svg></summary><p>As little as possible. Apple Health data never leaves your phone, and what you write is encrypted before it reaches our servers. The <a href="/privacy">Privacy Policy</a> lists every detail.</p></details>
+      </div>
+      <div class="note">
+        <h2 id="please-note">Please note</h2>
+        <p>Thousand Miles is a journal, not a medical device. Readiness scores, recaps and nutrition estimates are informational and don't replace a qualified clinician. See the <a href="/terms">Terms of Service</a>.</p>
+      </div>
+    </article>
   </div>
-  <article class="wrap doc">
-  <p class="lede">Something not working, or a question these answers don't cover? Email us, and include your iPhone model and iOS version if something is broken.</p>
-  <p class="contact"><a href="mailto:support@thousandmiles.app">support@thousandmiles.app</a></p>
-  <p>For privacy questions or a copy of your data: <a href="mailto:privacy@thousandmiles.app">privacy@thousandmiles.app</a>.</p>
-
-  <h2>Getting started</h2>
-  <h3>How do I sign in?</h3>
-  <p>Enter your email and we send a one-time code, so there's no password. You can also continue with Apple. An account is what lets your journal survive a reinstall and reach your other devices.</p>
-  <h3>Do I need an Apple Watch?</h3>
-  <p>No. Any watch or tracker that writes to Apple Health works: Garmin, Oura, Whoop, Fitbit, Polar, Coros and others. With no tracker, the readiness card asks two quick questions each morning instead.</p>
-  <h3>How do I change what Thousand Miles can read from Apple Health?</h3>
-  <p>Open the Settings app → Health → Data Access &amp; Devices → Thousand Miles, and switch each type on or off. The app can't show Apple's permission sheet a second time, so this is the way back if you declined it.</p>
-
-  <h2>Thousand Miles Plus</h2>
-  <h3>How do I cancel or change my plan?</h3>
-  <p>In the Settings app, tap your name → Subscriptions → Thousand Miles Plus. You can also open it from Profile → Thousand Miles Plus → Manage subscription in the app. Cancel at least 24 hours before the period ends to avoid the next renewal; Plus stays active until then.</p>
-  <h3>How do I get a refund?</h3>
-  <p>Apple processes every purchase and handles all refunds: request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. We can't issue refunds ourselves.</p>
-  <h3>I paid, but Plus isn't showing.</h3>
-  <p>Open Profile → Thousand Miles Plus → Restore purchases, signed in to the same Apple Account you paid with. If you have an offer code, use Redeem a code on the same page.</p>
-
-  <h2>A new phone</h2>
-  <h3>Will my journal come with me?</h3>
-  <p>Yes. Sign in with the same account. Your journal is encrypted with a key kept in your iCloud Keychain, so a phone signed in to the same Apple ID with iCloud Keychain on opens it straight away. Apple Health data moves through Apple's own iCloud Health sync.</p>
-  <h3>My new phone says some of my journal is locked.</h3>
-  <p>That phone doesn't have your key yet. Turn on iCloud Keychain (Settings → your name → iCloud → Passwords and Keychain) and give it a minute, or choose Enter your recovery code on the sheet the app shows. Nothing is deleted while it's locked. If every device, your iCloud Keychain and your recovery code are all lost, we can't unlock it for you, because we never had the key.</p>
-
-  <h2>Your data</h2>
-  <h3>How do I export everything?</h3>
-  <p>Settings → Privacy → Export My Data. You get a zip of every entry, your profile, settings and goals as readable JSON, plus your photos. Apple Health data isn't in it; the Health app has its own export.</p>
-  <h3>How do I delete my account?</h3>
-  <p>Settings → Delete Account. This removes your data from our servers and clears the app on that phone. Nothing in Apple Health is touched. Export first if you want a copy.</p>
-  <h3>What do you do with my data?</h3>
-  <p>As little as possible. Apple Health data never leaves your phone, and what you write is encrypted before it reaches our servers. The <a href="/privacy">Privacy Policy</a> lists every detail.</p>
-
-  <div class="note">
-  <h2>Please note</h2>
-  <p>Thousand Miles is a journal, not a medical device. Readiness scores, recaps and nutrition estimates are informational and don't replace a qualified clinician. See the <a href="/terms">Terms of Service</a>.</p>
-  </div>
-  </article>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <nav class="footer-links" aria-label="Footer">
-      <a href="/support">Support</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-      <a href="mailto:support@thousandmiles.app">support@thousandmiles.app</a>
-    </nav>
-    <p class="copyright">© 2026 Winson Chow Wei Xin, Singapore</p>
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><div class="fbrand"><img src="/images/icon-256.jpg" alt="" width="36" height="36" loading="lazy">Thousand Miles</div><p>A health journal for iPhone. Go the distance, your way.</p></div>
+      <div><h2>App</h2><ul>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="/support" aria-current="page">Support</a></li>
+      </ul></div>
+      <div><h2>Company</h2><ul>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="https://apps.apple.com/app/id6804423331">App Store</a></li>
+      </ul></div>
+      <div><h2>Contact</h2><ul>
+        <li><a href="mailto:support@thousandmiles.app">Press: Winson Chow</a></li>
+        <li><a href="mailto:support@thousandmiles.app">support@thousandmiles.app</a></li>
+      </ul></div>
+    </div>
+    <p class="copy">© 2026 Winson Chow Wei Xin, Singapore</p>
   </div>
 </footer>
 </body>

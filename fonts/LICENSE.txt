@@ -18,5 +18,16 @@ with @font-face. The file is the unmodified original, served as-is and
 not sold on its own. It is the same file the Thousand Miles app embeds
 (ThousandMiles/Resources/Fonts/fundamental-brigade.ttf).
 
+astonpoliz.ttf
+
+Astonpoliz
+Copyright (c) 2022 by Bambang Setiawan / Hujan Type.
+
+Used with written permission for commercial use (received
+2026-10-13). The file is the unmodified original, served as-is and not
+sold on its own, for the home page's headline only. It is the same file
+the Thousand Miles app embeds
+(ThousandMiles/Resources/Fonts/astonpoliz.ttf).
+
 No other font is served by this site. Body text uses the visitor's own
 system font.
