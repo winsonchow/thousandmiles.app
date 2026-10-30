@@ -1,6 +1,6 @@
-// thousandmiles.app: the header turns to glass once you scroll, the home
-// page's pinned phone follows the three reads, blocks fade in once, the
-// newsroom's paragraph copies, and a link to a support answer opens it.
+// thousandmiles.app: the header turns to glass once you scroll, blocks fade
+// in once, the home page's pills open a line or a sheet, the newsroom's
+// paragraph copies, and a link to a support answer opens it.
 // Everything is readable without this file: the page only hides content
 // to reveal it when <html> carries the "js" class set in each page's head.
 (() => {
@@ -21,14 +21,27 @@
       if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }
     }), { rootMargin: '0px 0px -8% 0px' });
     $$('.rv').forEach(e => ro.observe(e));
-    const reads = $('.reads');
-    if (reads) {
-      const so = new IO(es => es.forEach(e => {
-        if (e.isIntersecting) reads.dataset.active = e.target.dataset.step;
-      }), { rootMargin: '-45% 0px -45% 0px' });
-      $$('[data-step]').forEach(e => so.observe(e));
-    }
   }
+
+  // Home, In the moment: one pill open at a time, and the phone shows its screen.
+  const pills = $$('#closer button'), shots = $$('.closer .scr img');
+  pills.forEach(b => b.addEventListener('click', () => {
+    pills.forEach(o => { o.setAttribute('aria-expanded', 'false'); d.getElementById(o.getAttribute('aria-controls')).hidden = true; });
+    b.setAttribute('aria-expanded', 'true');
+    const bub = d.getElementById(b.getAttribute('aria-controls'));
+    bub.hidden = false;
+    shots.forEach((img, i) => img.classList.toggle('on', i === +b.dataset.shot));
+  }));
+
+  // Home: each chapter's pill opens its sheet; the cross or a tap outside closes it.
+  $$('[data-sheet]').forEach(b => b.addEventListener('click', () => {
+    const s = d.getElementById(b.dataset.sheet);
+    if (s && s.showModal) s.showModal();
+  }));
+  $$('dialog.sheet').forEach(s => {
+    s.querySelector('[data-close]').addEventListener('click', () => s.close());
+    s.addEventListener('click', e => { if (e.target === s) s.close(); });
+  });
 
   // Newsroom: copy the boilerplate paragraph.
   const btn = $('#copyBtn'), status = $('#copyStatus'), text = $('#boiler');
