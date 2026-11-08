@@ -516,3 +516,66 @@ footer li a:hover,footer li a[aria-current="page"]{color:var(--accent-text);text
 .twolevel{text-align:center;margin-top:44px;font-size:clamp(20px,2vw,24px);font-weight:650;letter-spacing:-.01em;color:var(--ink)}
 .twolevel span{color:var(--muted)}
 .more.tight{margin-top:18px}
+
+/* Blog articles, in the Newsroom's manner (2026-11-06): a 692px reading
+   column, the hero and app screens a little wider, question headings,
+   numbered sources, then More from the blog. */
+.art{padding:calc(124px + env(safe-area-inset-top,0px)) var(--gut-r) 0 var(--gut-l)}
+.art-head,.art-body{max-width:692px;margin:0 auto}
+.art-cat{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:13px;font-weight:650;letter-spacing:.06em;text-transform:uppercase}
+.art-cat a{color:var(--accent-text);text-decoration:none}
+.art-cat time{color:var(--muted);letter-spacing:.02em;text-transform:none;font-weight:500;font-size:14px}
+.art-head h1{margin-top:14px;font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spacing:-.025em}
+.dek{margin-top:18px;font-size:clamp(19px,2vw,22px);line-height:1.45;color:var(--muted)}
+.byline{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.byline .av{width:40px;height:40px;border-radius:50%;flex:none;object-fit:cover}
+.byline .mono{display:grid;place-items:center;background:var(--btn);color:var(--on-btn);font-size:14px;font-weight:700;letter-spacing:.02em}
+.byline p{font-size:15px;line-height:1.3}
+.byline b{display:block;color:var(--ink)}
+.byline p span{color:var(--muted)}
+.byline .rt{color:var(--muted);margin-right:auto}
+.byline .rt::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--line-strong);margin:0 10px 3px 2px;vertical-align:middle}
+.share{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);font:600 14px/1 var(--body);cursor:pointer}
+.share:hover{background:var(--soft)}
+.byline .ok{font-size:14px;color:var(--muted)}
+.art-hero{max-width:980px;margin:40px auto 0}
+.art-hero .phbox{border-radius:22px}
+.art-body{padding-bottom:24px}
+.art-body>p{margin-top:22px;font-size:clamp(17px,1.6vw,19px);line-height:1.62;color:var(--text)}
+.art-body>p:first-child{margin-top:44px}
+.art-body h2{margin-top:52px;font-size:clamp(23px,2.4vw,28px);line-height:1.2;letter-spacing:-.02em}
+.art-body h2+p{margin-top:14px}
+.art-body a{font-weight:500}
+.ref{font-size:.68em;font-weight:650!important;vertical-align:super;line-height:0;margin-left:1px;text-decoration:none;padding:0 2px}
+.art-body figure{margin:40px 0 0}
+.art-body figcaption{margin-top:14px;font-size:14px;line-height:1.45;color:var(--muted)}
+.appshots{display:flex;justify-content:center;gap:clamp(14px,3vw,32px);padding:clamp(24px,5vw,44px) 16px;background:var(--band);border-radius:22px;margin-left:calc(-1 * min(72px,4vw))!important;margin-right:calc(-1 * min(72px,4vw))!important}
+.appshots img{width:min(250px,40vw);border-radius:clamp(18px,3vw,30px);box-shadow:var(--phone-shadow);border:1px solid var(--frame-edge)}
+.appshots.one img{width:min(270px,58vw)}
+.art-body figure+p{margin-top:28px}
+.art-body .phbox{margin-top:36px}
+.art-body figure .phbox{margin-top:0}
+.phbox{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;padding:24px;text-align:center;border-radius:18px;color:var(--muted);border:1.5px dashed var(--line-strong);
+  background:repeating-linear-gradient(135deg,var(--wash) 0 14px,var(--band) 14px 28px)}
+.phbox svg{color:var(--accent-text);opacity:.85}
+.phbox b{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.phbox span{max-width:30em;font-size:15px;line-height:1.45}
+blockquote.pull{margin:44px 0 0;padding:4px 0 4px 24px;border-left:3px solid var(--accent)}
+blockquote.pull p{font-size:clamp(22px,2.6vw,28px);line-height:1.3;font-weight:650;letter-spacing:-.015em;color:var(--ink)}
+blockquote.pull cite{display:block;margin-top:14px;font-style:normal;font-size:15px;color:var(--muted)}
+.sources{margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+.sources h2{margin-top:0!important;font-size:15px!important;letter-spacing:.06em!important;text-transform:uppercase;color:var(--muted)}
+.sources ol{margin:14px 0 0;padding-left:22px;font-size:14px;line-height:1.5;color:var(--muted)}
+.sources li{margin-top:8px;overflow-wrap:anywhere}
+.sources li:target{color:var(--ink)}
+.revised{margin-top:28px!important;font-size:14px!important;color:var(--muted)!important}
+.more-from{margin-top:64px;padding:64px 0 88px;background:var(--band)}
+.more-from h2{font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:28px}
+.mcard{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:var(--surface);box-shadow:var(--card-shadow);text-decoration:none;color:inherit}
+.mcard .phbox{border:0;border-radius:0}
+.mcard .in{padding:20px 22px 24px}
+.mcard h3{margin-top:8px;font-size:20px;line-height:1.25}
+.mcard .meta{margin-top:10px;font-size:14px;color:var(--muted)}
+.mcard:hover h3{color:var(--accent-text)}
+@media (max-width:640px){.appshots{margin-left:0!important;margin-right:0!important}.byline .rt{margin-right:0}.byline .share{margin-left:auto}}
