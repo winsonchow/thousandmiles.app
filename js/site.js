@@ -1,5 +1,5 @@
 // thousandmiles.app: the header turns to glass once you scroll, blocks fade
-// in once, the home page's pills open a line or a sheet, the newsroom's
+// in once, the home page's readiness card shows each zone, the newsroom's
 // paragraph copies, and a link to a support answer opens it.
 // Everything is readable without this file: the page only hides content
 // to reveal it when <html> carries the "js" class set in each page's head.
@@ -23,25 +23,26 @@
     $$('.rv').forEach(e => ro.observe(e));
   }
 
-  // Home, In the moment: one pill open at a time, and the phone shows its screen.
-  const pills = $$('#closer button'), shots = $$('.closer .scr img');
-  pills.forEach(b => b.addEventListener('click', () => {
-    pills.forEach(o => { o.setAttribute('aria-expanded', 'false'); d.getElementById(o.getAttribute('aria-controls')).hidden = true; });
-    b.setAttribute('aria-expanded', 'true');
-    const bub = d.getElementById(b.getAttribute('aria-controls'));
-    bub.hidden = false;
-    shots.forEach((img, i) => img.classList.toggle('on', i === +b.dataset.shot));
-  }));
-
-  // Home: each chapter's pill opens its sheet; the cross or a tap outside closes it.
-  $$('[data-sheet]').forEach(b => b.addEventListener('click', () => {
-    const s = d.getElementById(b.dataset.sheet);
-    if (s && s.showModal) s.showModal();
-  }));
-  $$('dialog.sheet').forEach(s => {
-    s.querySelector('[data-close]').addEventListener('click', () => s.close());
-    s.addEventListener('click', e => { if (e.target === s) s.close(); });
-  });
+  // Home: the readiness card. Each button shows that zone's headline (the
+  // app's own zone lines), its colour and where the knob sits on the bar.
+  const card = $('#rcard');
+  if (card) {
+    const zones = {
+      1: ['Rest today', 'Recover', '12.5%'],
+      2: ['Take a lighter day', 'Easy', '37.5%'],
+      3: ['Good to go', 'Ready', '62.5%'],
+      4: ['Good day for a big effort', 'Primed', '87.5%'],
+    };
+    const head = $('#rhead'), word = $('#zword'), buttons = card.querySelectorAll('.zones button');
+    buttons.forEach(b => b.addEventListener('click', () => {
+      const z = zones[b.dataset.z];
+      buttons.forEach(o => o.setAttribute('aria-pressed', o === b ? 'true' : 'false'));
+      card.style.setProperty('--zone', `var(--z${b.dataset.z})`);
+      card.style.setProperty('--at', z[2]);
+      head.textContent = z[0];
+      word.textContent = z[1];
+    }));
+  }
 
   // Newsroom: copy the boilerplate paragraph.
   const btn = $('#copyBtn'), status = $('#copyStatus'), text = $('#boiler');
@@ -52,7 +53,8 @@
       () => { status.textContent = 'Copying is blocked here. Select the paragraph to copy it.'; });
   });
 
-  // Support: a link to an answer (support#export) opens it.
+  // Support, and the home page's morning read: a link to an answer
+  // (support#export, /#morning-read) opens it.
   const openTarget = () => {
     const id = decodeURIComponent(location.hash.slice(1));
     const t = id && d.getElementById(id);
